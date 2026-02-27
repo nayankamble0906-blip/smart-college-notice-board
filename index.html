@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart College Notice Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>📢 Smart College Digital Notice Board</h1>
+    <p>Live | Smart | Paperless</p>
+</header>
+
+<div class="container">
+
+    <!-- Search & Filter -->
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search notices...">
+        <select id="filter">
+            <option value="All">All Categories</option>
+            <option value="Exam">Exam</option>
+            <option value="Event">Event</option>
+            <option value="Holiday">Holiday</option>
+            <option value="General">General</option>
+        </select>
+        <button onclick="showLogin()">Admin Login</button>
+    </div>
+
+    <!-- Notice Board -->
+    <div class="notice-board" id="board"></div>
+
+    <!-- Admin Login -->
+    <div class="admin-panel" id="loginPanel">
+        <h3>Admin Login</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+        <h3>Add New Notice</h3>
+        <input type="text" id="title" placeholder="Notice Title">
+        <textarea id="content" placeholder="Notice Content"></textarea>
+        <select id="category">
+            <option>Exam</option>
+            <option>Event</option>
+            <option>Holiday</option>
+            <option>General</option>
+        </select>
+        <button onclick="addNotice()">Add Notice</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Smart College | Digital Notice System
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
